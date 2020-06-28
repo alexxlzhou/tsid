@@ -27,6 +27,12 @@ To install [pinocchio](https://github.com/stack-of-tasks/pinocchio) follow the i
     cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=$DEVEL/openrobots
     make install
 
+If a specific python version is used, add for example -DPYTHON_EXECUTABLE=$(which python3).
+If there are trouble finding right BOOST, try -DBoost_NO_BOOST_CMAKE=ON.
+Here is an example
+
+    cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/opt/openrobots -DPYTHON_EXECUTABLE=$(which python3) -DBoost_NO_BOOST_CMAKE=ON
+
 ## Python Bindings
 To use this library in python, we offer python bindings based on Boost.Python and EigenPy.
 
